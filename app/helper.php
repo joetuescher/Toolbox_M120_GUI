@@ -1,8 +1,7 @@
 <?php
-
-class Model{
+class helper{
 
 	public function __construct(){
-		
+
 	}
 }
