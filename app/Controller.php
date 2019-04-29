@@ -16,5 +16,8 @@ class Controller{
 		$this->helper = new helper;
 	}
 	
+	public function showNav(){
+		$this->view->showNav();
+	}
 }
 ?>

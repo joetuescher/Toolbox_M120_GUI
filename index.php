@@ -11,13 +11,13 @@
 </head>
 <body>
 
-	<div class="container" >
+	<div class="mainContainer">
 
 		<?php 
 			require "app/Controller.php";
 			$controller = new Controller;
 			$request = array_merge($_GET, $_POST);
-
+			$controller->showNav();
 /*
 			switch (@$request['Action']) {
 				case 'edit':
