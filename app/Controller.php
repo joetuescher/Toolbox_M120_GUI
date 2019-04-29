@@ -1,6 +1,6 @@
 <?php
 
-require 'Model.php';
+require 'Model/Model.php';
 require 'View.php';
 require 'helper.php';
 
