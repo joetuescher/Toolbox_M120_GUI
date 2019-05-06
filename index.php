@@ -17,7 +17,9 @@
 			$controller = new Controller;
 			$request = array_merge($_GET, $_POST);
 			$controller->showNav();
-
+		?>
+		<div class="mainContent">
+			<?php
 			switch (@$request['Action']) {
 				case 'Home':
 					$controller->showHome();
@@ -26,7 +28,7 @@
 				case 'Hash':
 					$controller->showHash();
 					break;
-					
+
 				case 'ElectricalResistance':
 					$controller->showElectricalResistance();
 					break;
@@ -36,6 +38,7 @@
 					break;
 			}
 		?>	
+			</div>
 
 	</div>
 
