@@ -33,6 +33,10 @@
 					$controller->showElectricalResistance();
 					break;
 
+				case 'Gewichtsmasse':
+					$controller->showGewichtsmasse();
+					break;
+
 				default:
 					$controller->showHome();
 					break;
