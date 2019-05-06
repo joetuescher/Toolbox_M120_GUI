@@ -32,6 +32,10 @@
 				case 'ElectricalResistance':
 					$controller->showElectricalResistance();
 					break;
+					
+				case 'calcElectricalResistance':
+					$controller->calcElectricalResistance($request);
+					break;
 
 				default:
 					$controller->showHome();
