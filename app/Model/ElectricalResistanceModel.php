@@ -5,7 +5,12 @@ class ElectricalResistanceModel{
 	public function __construct(){
 
 	}
-	public function 
+	public function calcElectricalResistance($data){
+
+		var_dump($data);
+
+		return $data;
+	}
 }
 
 

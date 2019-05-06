@@ -44,23 +44,23 @@ class View{
   }
 
   public function showElectricalResistance(){
-    echo '<form>
-  <h1>Elektrischer Wiederstand</h1>
-  <div class="form-row">
-    <div class="form-group col-md-4">
-      <label for="U">U</label>
-      <input type="number" class="form-control" id="U">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="R">R</label>
-      <input type="number" class="form-control" id="R">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="I">I</label>
-      <input type="number" class="form-control" id="I">
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary" Name="Action" value="calcElectricalResistance">Berechnen</button>
-</form>';
+    echo '<h1>Elektrischer Wiederstand</h1>
+          <form method="get">
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="U">U</label>
+              <input type="number" class="form-control" id="U">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="R">R</label>
+              <input type="number" class="form-control" id="R">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="I">I</label>
+              <input type="number" class="form-control" id="I">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" Name="Action" value="calcElectricalResistance">Berechnen</button>
+        </form>';
   }
 }

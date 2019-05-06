@@ -1,6 +1,6 @@
 <?php
 
-require 'Model/Model.php';
+require 'Model/ElectricalResistanceModel.php';
 require 'View.php';
 require 'helper.php';
 
@@ -12,8 +12,8 @@ class Controller{
 
 	public function __construct(){
 		$this->view = new view;
-		$this->model = new model;
 		$this->helper = new helper;
+		$this->electricalResistanceModel = new ElectricalResistanceModel;
 	}
 	
 	public function showNav(){
@@ -32,9 +32,9 @@ class Controller{
 		$this->view->showGewichtsmasse();
 	}
 	public function calcElectricalResistance($data){
-		$data = $this->model->calcElectricalResistance($data);
-		$this->view->showElectricalResistanceResult($data);
-		
+		$data = $this->electricalResistanceModel->calcElectricalResistance($data);
+		//$this->view->showElectricalResistanceResult($data);
+
 	}
 }
 ?>
