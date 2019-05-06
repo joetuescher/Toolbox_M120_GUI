@@ -25,5 +25,8 @@ class Controller{
 	public function showHome(){
 		$this->view->showHome();
 	}
+	public function showElectricalResistance(){
+		$this->view->showElectricalResistance();
+	}
 }
 ?>

@@ -12,7 +12,6 @@
 <body>
 
 	<div class="mainContainer">
-
 		<?php 
 			require "app/Controller.php";
 			$controller = new Controller;
@@ -26,6 +25,10 @@
 
 				case 'Hash':
 					$controller->showHash();
+					break;
+					
+				case 'ElectricalResistance':
+					$controller->showElectricalResistance();
 					break;
 
 				default:

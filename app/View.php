@@ -6,7 +6,7 @@ class View{
 	}
 	public function showNav(){
 		echo '<nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navigation</a>
+            <a class="navbar-brand" href="#">Toolbox</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -18,6 +18,9 @@ class View{
                 </li>
                 <li class="nav-item">
                   <button type="submit" name="Action" class="btn" value="Hash">Hash Generator</button>
+                </li>
+                <li class="nav-item">
+                  <button type="submit" name="Action" class="btn" value="ElectricalResistance">Eletrical Resistance</button>
                 </li>
               </ul>
             </div>
@@ -31,5 +34,8 @@ class View{
     echo '<h1>Hash Generator</h1>
           <p>Du bisch da</p>
           <p>Wer das liest ist dumm.</p>';
+  }
+  public function showElectricalResistance(){
+    echo 'ElectricalResistance';
   }
 }
