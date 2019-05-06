@@ -22,6 +22,9 @@ class View{
                 <li class="nav-item">
                   <button type="submit" name="Action" class="btn" value="ElectricalResistance">Eletrical Resistance</button>
                 </li>
+                <li class="nav-item">
+                  <button type="submit" name="Action" class="btn" value="Gewichtsmasse">Gewichtsmasse Umwandeln</button>
+                </li>
               </ul>
             </div>
           </form>

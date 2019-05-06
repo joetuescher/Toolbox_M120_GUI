@@ -37,6 +37,10 @@
 					$controller->calcElectricalResistance($request);
 					break;
 
+				case 'Gewichtsmasse':
+					$controller->showGewichtsmasse();
+					break;
+
 				default:
 					$controller->showHome();
 					break;
