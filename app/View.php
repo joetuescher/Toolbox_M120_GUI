@@ -34,9 +34,20 @@ class View{
     echo '<h1>Home</h1>';
   }
   public function showHashGenerator(){
-    echo '<h1>Hash Generator</h1>
-          <p>Du bisch da</p>
-          <p>Wer das liest ist dumm.</p>';
+    echo '<h1>Hash Generator</h1><br>
+          <form method="get">
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="hashinput">Hashinput</label>
+              <input type="text" class="form-control" id="hashinput">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="hashoutput">Hashoutput</label>
+              <input type="text" class="form-control" id="hashoutput">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" Name="Action" value="Hash">Hash generieren</button>
+        </form>';
   }
 
   public function showGewichtsmasse(){
