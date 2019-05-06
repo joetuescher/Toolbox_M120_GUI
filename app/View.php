@@ -38,4 +38,7 @@ class View{
   public function showElectricalResistance(){
     echo 'ElectricalResistance';
   }
+  public function showGewichtsmasse(){
+    echo 'Gewichtsmasse';
+  }
 }

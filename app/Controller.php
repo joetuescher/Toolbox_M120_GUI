@@ -28,5 +28,8 @@ class Controller{
 	public function showElectricalResistance(){
 		$this->view->showElectricalResistance();
 	}
+	public function showGewichtsmasse(){
+		$this->view->showGewichtsmasse();
+	}
 }
 ?>
