@@ -72,4 +72,7 @@ class View{
   </div>
 </form>';
   }
+  public function showGewichtsmasse(){
+    echo 'Gewichtsmasse';
+  }
 }
