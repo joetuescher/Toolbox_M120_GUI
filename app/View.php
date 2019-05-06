@@ -29,7 +29,7 @@ class View{
   }
   public function showHashGenerator(){
     echo '<h1>Hash Generator</h1>
-          <p>Missgeburt</p>
+          <p>Du bisch da</p>
           <p>Wer das liest ist dumm.</p>';
   }
 }
