@@ -18,38 +18,20 @@
 			$controller = new Controller;
 			$request = array_merge($_GET, $_POST);
 			$controller->showNav();
-/*
+
 			switch (@$request['Action']) {
-				case 'edit':
-					$auto->showForm($request['ID']);
+				case 'Home':
+					$controller->showHome();
 					break;
 
-				case 'delete':
-					echo "delete";
-					$auto->delete($request['ID']);
-					$auto->getAutos();
-					break;
-				
-				case 'create':
-					echo "create";
-					$auto->showForm();
-					break;
-
-				case 'save':
-					if(@$request['ID'] == null){
-						$auto->save($request);
-						$auto->getAutos();
-					}else{
-						$auto->update($request);
-						$auto->getAutos();
-					}					
+				case 'Hash':
+					$controller->showHash();
 					break;
 
 				default:
-					$auto->getAutos();
+					$controller->showHome();
 					break;
 			}
-			*/
 		?>	
 
 	</div>

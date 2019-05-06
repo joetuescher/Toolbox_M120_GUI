@@ -19,5 +19,11 @@ class Controller{
 	public function showNav(){
 		$this->view->showNav();
 	}
+	public function showHash(){
+		$this->view->showHashGenerator();
+	}
+	public function showHome(){
+		$this->view->showHome();
+	}
 }
 ?>
