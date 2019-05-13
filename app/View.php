@@ -46,7 +46,7 @@ class View{
               <input type="text" class="form-control" id="hashoutput">
             </div>
           </div>
-          <button type="submit" class="btn btn-primary" Name="Action" value="Hash">Hash generieren</button>
+          <button type="submit" class="btn btn-primary" Name="Action" value="HashCode">Hash generieren</button>
         </form>';
   }
 
