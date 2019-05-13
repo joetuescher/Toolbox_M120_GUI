@@ -5,3 +5,7 @@
 .mainContent{
 	margin: 20px !important;
 }
+#btn-ElectricalResistance{
+	bottom: 0;
+    position: absolute;
+}
