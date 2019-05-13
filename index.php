@@ -30,11 +30,7 @@
 					break;
 
 				case 'ElectricalResistance':
-					$controller->showElectricalResistance();
-					break;
-					
-				case 'calcElectricalResistance':
-					$controller->calcElectricalResistance($request);
+					$controller->showElectricalResistance($request);
 					break;
 
 				case 'Gewichtsmasse':
