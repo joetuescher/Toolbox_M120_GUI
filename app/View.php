@@ -64,7 +64,7 @@ class View{
               <input type="text" class="form-control" id="hashoutput" value="'.$data['hashoutput'].'" disabled>
             </div>
           </div>
-          <button type="submit" name="Action" class="btn" value="Hash">Neuen Hash generieren</button>
+          <button type="submit" name="Action" class="btn btn-primary" value="Hash">Neuen Hash generieren</button>
         </form>';
   }
 
