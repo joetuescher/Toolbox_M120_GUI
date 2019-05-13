@@ -48,19 +48,19 @@ class View{
           <form method="get">
           <div class="form-row">
             <div class="form-group col-md-4">
-              <label for="U">U</label>
-              <input type="number" class="form-control" id="U">
+              <input type="number" name="R" class="form-control" id="R" placeholder="R">
             </div>
             <div class="form-group col-md-4">
-              <label for="R">R</label>
-              <input type="number" class="form-control" id="R">
+              <input type="number" name="I" class="form-control" id="I" placeholder="I">
             </div>
+            <input type="hidden" name="function" value="calcU">
             <div class="form-group col-md-4">
-              <label for="I">I</label>
-              <input type="number" class="form-control" id="I">
+              <button type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary" Name="Action" value="calcElectricalResistance">Berechnen</button>
         </form>';
+  }
+  public function showElectricalResistanceResult($data){
+    
   }
 }

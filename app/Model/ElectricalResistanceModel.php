@@ -1,14 +1,17 @@
 <?php
-
 class ElectricalResistanceModel{
 
 	public function __construct(){
 
 	}
-	public function calcElectricalResistance($data){
 
-		var_dump($data);
-
+	public function calculateU($data){
+		return $data;
+	}
+	public function calculateI($data){
+		return $data;
+	}
+	public function calculateR($data){
 		return $data;
 	}
 }

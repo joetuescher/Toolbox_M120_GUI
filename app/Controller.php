@@ -25,16 +25,26 @@ class Controller{
 	public function showHome(){
 		$this->view->showHome();
 	}
-	public function showElectricalResistance(){
-		$this->view->showElectricalResistance();
+	public function showElectricalResistance($data){
+
+		if(@$data['function'] == 'calcU'){
+			$data = $this->electricalResistanceModel->calculateU($data);
+			$this->view->showElectricalResistanceResult($data);
+
+		}elseif(@$data['function'] == 'calcI'){
+			$data = $this->electricalResistanceModel->calculateI($data);
+			$this->view->showElectricalResistanceResult($data);
+
+		}elseif(@$data['function'] == 'calcR'){
+			$data = $this->electricalResistanceModel->calculateR($data);
+			$this->view->showElectricalResistanceResult($data);
+
+		}else{
+			$this->view->showElectricalResistance();
+		}
 	}
 	public function showGewichtsmasse(){
 		$this->view->showGewichtsmasse();
-	}
-	public function calcElectricalResistance($data){
-		$data = $this->electricalResistanceModel->calcElectricalResistance($data);
-		//$this->view->showElectricalResistanceResult($data);
-
 	}
 }
 ?>
