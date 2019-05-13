@@ -53,7 +53,6 @@ class View{
   public function showGewichtsmasse(){
     echo 'Gewichtsmasse';
   }
-
   public function showElectricalResistance(){
     echo '<h1>Elektrischer Wiederstand</h1>
           <p>Hier kann der Elektrische Wiederstand berechnet werden.</p>
@@ -73,9 +72,8 @@ class View{
               <button id="btn-ElectricalResistance" type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
             </div>
           </div>
-        </form>
-        <hr>
-        <form method="get">
+        </form><hr>
+          <form method="get">
             <h3>Berechnung von Ohm (R)</h3>
           <div class="form-row">
             <div class="form-group col-md-4">
@@ -93,7 +91,7 @@ class View{
           </div>
         </form>
         <hr>
-        <form method="get">
+          <form method="get">
             <h3>Berechnung von Ampere (I)</h3>
           <div class="form-row">
             <div class="form-group col-md-4">
@@ -109,9 +107,8 @@ class View{
               <button id="btn-ElectricalResistance" type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
             </div>
           </div>
-        </form>
-
-        ';
+        </form><hr>
+         ';
   }
   public function showElectricalResistanceResult($data){
     echo '
@@ -119,15 +116,15 @@ class View{
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="U">Volt (U)</label>
-              <input type="number" name="U" class="form-control" id="U" value="'.$data['U'].'" required>
+              <input type="number" name="U" class="form-control" id="U" value="'.$data['U'].'" required disabled>
             </div>
             <div class="form-group col-md-4">
               <label for="R">Ohm (R)</label>
-              <input type="number" name="R" class="form-control" id="R" value="'.$data['R'].'" required>
+              <input type="number" name="R" class="form-control" id="R" value="'.$data['R'].'" required disabled>
             </div>
             <div class="form-group col-md-4">
               <label for="I">Ampere (I)</label>
-              <input type="number" name="I" class="form-control" id="I" value="'.$data['I'].'" required>
+              <input type="number" name="I" class="form-control" id="I" value="'.$data['I'].'" required disabled>
             </div>
           </div>
       ';
