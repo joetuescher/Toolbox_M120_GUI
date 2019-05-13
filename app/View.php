@@ -59,19 +59,70 @@ class View{
           <form method="get">
           <div class="form-row">
             <div class="form-group col-md-4">
-              <input type="number" name="R" class="form-control" id="R" placeholder="R">
+              <label for="R">Ohm (R)</label>
+              <input type="number" name="R" class="form-control" id="R" placeholder="R" required>
             </div>
             <div class="form-group col-md-4">
-              <input type="number" name="I" class="form-control" id="I" placeholder="I">
+              <label for="I">Ampere (I)</label>
+              <input type="number" name="I" class="form-control" id="I" placeholder="I" required>
             </div>
             <input type="hidden" name="function" value="calcU">
             <div class="form-group col-md-4">
               <button type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
             </div>
           </div>
-        </form>';
+        </form>
+        <form method="get">
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="U">Volt (U)</label>
+              <input type="number" name="U" class="form-control" id="U" placeholder="U" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="I">Ampere (I)</label>
+              <input type="number" name="I" class="form-control" id="I" placeholder="I" required>
+            </div>
+            <input type="hidden" name="function" value="calcR">
+            <div class="form-group col-md-4">
+              <button type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
+            </div>
+          </div>
+        </form>
+        <form method="get">
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="U">Volt (U)</label>
+              <input type="number" name="U" class="form-control" id="U" placeholder="U" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="R">Ohm (R)</label>
+              <input type="number" name="R" class="form-control" id="R" placeholder="R" required>
+            </div>
+            <input type="hidden" name="function" value="calcI">
+            <div class="form-group col-md-4">
+              <button type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
+            </div>
+          </div>
+        </form>
+
+        ';
   }
   public function showElectricalResistanceResult($data){
-    
+    echo '
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="U">Volt (U)</label>
+              <input type="number" name="U" class="form-control" id="U" value="'.$data['U'].'" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="R">Ohm (R)</label>
+              <input type="number" name="R" class="form-control" id="R" value="'.$data['R'].'" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="I">Ampere (I)</label>
+              <input type="number" name="I" class="form-control" id="I" value="'.$data['I'].'" required>
+            </div>
+          </div>
+      ';
   }
 }

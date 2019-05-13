@@ -9,6 +9,7 @@ class Controller{
 	private $view;
 	private $model;
 	private $helper;
+	private $electricalResistanceModel;
 
 	public function __construct(){
 		$this->view = new view;
@@ -25,7 +26,7 @@ class Controller{
 	public function showHome(){
 		$this->view->showHome();
 	}
-	public function showElectricalResistance($data){
+	public function electricalResistance($data){
 
 		if(@$data['function'] == 'calcU'){
 			$data = $this->electricalResistanceModel->calculateU($data);
@@ -41,6 +42,7 @@ class Controller{
 
 		}else{
 			$this->view->showElectricalResistance();
+
 		}
 	}
 	public function showGewichtsmasse(){
