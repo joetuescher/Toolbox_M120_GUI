@@ -75,7 +75,9 @@ class View{
 
   public function showElectricalResistance(){
     echo '<h1>Elektrischer Wiederstand</h1>
+          <p>Hier kann der Elektrische Wiederstand berechnet werden.</p>
           <form method="get">
+            <h3>Berechnung von Volt (U)</h3>
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="R">Ohm (R)</label>
@@ -87,11 +89,13 @@ class View{
             </div>
             <input type="hidden" name="function" value="calcU">
             <div class="form-group col-md-4">
-              <button type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
+              <button id="btn-ElectricalResistance" type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
             </div>
           </div>
         </form>
+        <hr>
         <form method="get">
+            <h3>Berechnung von Ohm (R)</h3>
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="U">Volt (U)</label>
@@ -103,11 +107,13 @@ class View{
             </div>
             <input type="hidden" name="function" value="calcR">
             <div class="form-group col-md-4">
-              <button type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
+              <button id="btn-ElectricalResistance" type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
             </div>
           </div>
         </form>
+        <hr>
         <form method="get">
+            <h3>Berechnung von Ampere (I)</h3>
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="U">Volt (U)</label>
@@ -119,7 +125,7 @@ class View{
             </div>
             <input type="hidden" name="function" value="calcI">
             <div class="form-group col-md-4">
-              <button type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
+              <button id="btn-ElectricalResistance" type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
             </div>
           </div>
         </form>
@@ -128,6 +134,7 @@ class View{
   }
   public function showElectricalResistanceResult($data){
     echo '
+          <h2>Resultat</h2>
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="U">Volt (U)</label>
