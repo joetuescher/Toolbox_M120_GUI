@@ -57,15 +57,14 @@ class View{
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="hashinput">Hashinput</label>
-              <input type="text" class="form-control" id="hashinput" value="'.$data['hashinput'].'">
+              <input type="text" class="form-control" id="hashinput" value="'.$data['hashinput'].'" disabled>
             </div>
             <div class="form-group col-md-4">
               <label for="hashoutput">Hashoutput</label>
-              <input type="text" class="form-control" id="hashoutput" value="'.$data['hashoutput'].'">
+              <input type="text" class="form-control" id="hashoutput" value="'.$data['hashoutput'].'" disabled>
             </div>
           </div>
-          <input type="hidden" name="function" value="HashCode">
-          <button type="submit" class="btn btn-primary" Name="Action" value="Hash">Hash generieren</button>
+          <button type="submit" name="Action" class="btn" value="Hash">Neuen Hash generieren</button>
         </form>';
   }
 
