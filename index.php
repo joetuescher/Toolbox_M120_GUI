@@ -26,7 +26,7 @@
 					break;
 
 				case 'Hash':
-					$controller->showHash();
+					$controller->showHash($request);
 					break;
 
 				case 'ElectricalResistance':

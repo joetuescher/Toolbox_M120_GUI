@@ -39,14 +39,33 @@ class View{
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="hashinput">Hashinput</label>
-              <input type="text" class="form-control" id="hashinput">
+              <input type="text" name="hashinput" class="form-control" id="hashinput">
             </div>
             <div class="form-group col-md-4">
               <label for="hashoutput">Hashoutput</label>
-              <input type="text" class="form-control" id="hashoutput">
+              <input type="text" name="hashoutput" class="form-control" id="hashoutput">
             </div>
           </div>
-          <button type="submit" class="btn btn-primary" Name="Action" value="HashCode">Hash generieren</button>
+          <input type="hidden" name="function" value="HashCode">
+          <button type="submit" class="btn btn-primary" Name="Action" value="Hash">Hash generieren</button>
+        </form>';
+  }
+
+  public function showHashGeneratorResult($data){
+    echo '<h1>Hash Generator</h1><br>
+          <form method="get">
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="hashinput">Hashinput</label>
+              <input type="text" class="form-control" id="hashinput" value="'.$data['hashinput'].'">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="hashoutput">Hashoutput</label>
+              <input type="text" class="form-control" id="hashoutput" value="'.$data['hashoutput'].'">
+            </div>
+          </div>
+          <input type="hidden" name="function" value="HashCode">
+          <button type="submit" class="btn btn-primary" Name="Action" value="Hash">Hash generieren</button>
         </form>';
   }
 
