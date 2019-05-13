@@ -10,41 +10,42 @@
 	<script src="public/js/main.js"></script>
 </head>
 <body>
+	<div class="container">
+		<div class="mainContainer">
+			<?php 
+				require "app/Controller.php";
+				$controller = new Controller;
+				$request = array_merge($_GET, $_POST);
+				$controller->showNav();
+			?>
+			<div class="mainContent">
+				<?php
+				switch (@$request['Action']) {
+					case 'Home':
+						$controller->showHome();
+						break;
 
-	<div class="mainContainer">
-		<?php 
-			require "app/Controller.php";
-			$controller = new Controller;
-			$request = array_merge($_GET, $_POST);
-			$controller->showNav();
-		?>
-		<div class="mainContent">
-			<?php
-			switch (@$request['Action']) {
-				case 'Home':
-					$controller->showHome();
-					break;
+					case 'Hash':
+						$controller->showHash($request);
+						break;
 
-				case 'Hash':
-					$controller->showHash();
-					break;
+					case 'ElectricalResistance':
+						$controller->electricalResistance($request);
+						break;
 
-				case 'ElectricalResistance':
-					$controller->electricalResistance($request);
-					break;
+					case 'Gewichtsmasse':
+						$controller->showGewichtsmasse();
+						break;
 
-				case 'Gewichtsmasse':
-					$controller->showGewichtsmasse();
-					break;
+					default:
+						$controller->showHome();
+						break;
+				}
+			?>	
+				</div>
 
-				default:
-					$controller->showHome();
-					break;
-			}
-		?>	
-			</div>
+		</div>
 
 	</div>
-
 </body>
 </html>

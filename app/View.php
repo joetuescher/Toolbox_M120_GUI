@@ -39,14 +39,32 @@ class View{
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="hashinput">Hashinput</label>
-              <input type="text" class="form-control" id="hashinput">
+              <input type="text" name="hashinput" class="form-control" id="hashinput">
             </div>
             <div class="form-group col-md-4">
               <label for="hashoutput">Hashoutput</label>
-              <input type="text" class="form-control" id="hashoutput">
+              <input type="text" name="hashoutput" class="form-control" id="hashoutput">
             </div>
           </div>
-          <button type="submit" class="btn btn-primary" Name="Action" value="HashCode">Hash generieren</button>
+          <input type="hidden" name="function" value="HashCode">
+          <button type="submit" class="btn btn-primary" Name="Action" value="Hash">Hash generieren</button>
+        </form>';
+  }
+
+  public function showHashGeneratorResult($data){
+    echo '<h1>Hash Generator</h1><br>
+          <form method="get">
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="hashinput">Hashinput</label>
+              <input type="text" class="form-control" id="hashinput" value="'.$data['hashinput'].'" disabled>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="hashoutput">Hashoutput</label>
+              <input type="text" class="form-control" id="hashoutput" value="'.$data['hashoutput'].'" disabled>
+            </div>
+          </div>
+          <button type="submit" name="Action" class="btn btn-primary" value="Hash">Neuen Hash generieren</button>
         </form>';
   }
 
@@ -55,9 +73,7 @@ class View{
   }
   public function showElectricalResistance(){
     echo '<h1>Elektrischer Wiederstand</h1>
-          <p>Hier kann der Elektrische Wiederstand berechnet werden.</p>
           <form method="get">
-            <h3>Berechnung von Volt (U)</h3>
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="R">Ohm (R)</label>
@@ -69,12 +85,13 @@ class View{
             </div>
             <input type="hidden" name="function" value="calcU">
             <div class="form-group col-md-4">
-              <button id="btn-ElectricalResistance" type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
+              <button type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
             </div>
           </div>
         </form><hr>
-          <form method="get">
+        <form method="get">
             <h3>Berechnung von Ohm (R)</h3>
+        <form method="get">
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="U">Volt (U)</label>
@@ -86,7 +103,7 @@ class View{
             </div>
             <input type="hidden" name="function" value="calcR">
             <div class="form-group col-md-4">
-              <button id="btn-ElectricalResistance" type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
+              <button type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
             </div>
           </div>
         </form>
@@ -104,7 +121,7 @@ class View{
             </div>
             <input type="hidden" name="function" value="calcI">
             <div class="form-group col-md-4">
-              <button id="btn-ElectricalResistance" type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
+              <button type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
             </div>
           </div>
         </form><hr>
@@ -112,7 +129,6 @@ class View{
   }
   public function showElectricalResistanceResult($data){
     echo '
-          <h2>Resultat</h2>
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="U">Volt (U)</label>
