@@ -33,6 +33,10 @@
 						$controller->electricalResistance($request);
 						break;
 
+					case 'WoerterZaehlen':
+						$controller->showWoerterZaehlen();
+						break;
+
 					case 'Gewichtsmasse':
 						$controller->showGewichtsmasse();
 						break;

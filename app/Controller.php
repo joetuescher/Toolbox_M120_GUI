@@ -12,6 +12,7 @@ class Controller{
 	private $helper;
 	private $electricalResistanceModel;
 	private $hashGeneratorModel;
+	private $woerterZaehlen;
 
 	public function __construct(){
 		$this->view = new view;
@@ -56,6 +57,9 @@ class Controller{
 	}
 	public function showGewichtsmasse(){
 		$this->view->showGewichtsmasse();
+	}
+	public function showWoerterZaehlen(){
+		$this->view->showWoerterZaehlen();
 	}
 }
 ?>
