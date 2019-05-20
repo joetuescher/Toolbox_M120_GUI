@@ -1,6 +1,6 @@
 
 
-function checkInputFields($id){
+function checkInputFields(){
 	var inputU = document.getElementById("U").value;
 	var inputR = document.getElementById("R").value;
 	var inputI = document.getElementById("I").value;
@@ -37,5 +37,4 @@ function checkInputFields($id){
 			I.removeAttribute("disabled");
 		}
 	}
-
 }

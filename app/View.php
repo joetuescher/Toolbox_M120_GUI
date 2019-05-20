@@ -99,15 +99,15 @@ class View{
           <div class="form-row">
             <div class="form-group col-md-3">
               <label for="U">Volt (U)</label>
-              <input oninput="checkInputFields(U)" type="number" name="U" class="form-control" id="U" placeholder="U" required>
+              <input oninput="checkInputFields()" type="number" name="U" class="form-control" id="U" placeholder="U" required>
             </div>
             <div class="form-group col-md-3">
               <label for="R">Ohm (R)</label>
-              <input oninput="checkInputFields(R)" type="number" name="R" class="form-control" id="R" placeholder="R" required>
+              <input oninput="checkInputFields()" type="number" name="R" class="form-control" id="R" placeholder="R" required>
             </div>
             <div class="form-group col-md-3">
               <label for="I">Ampere (I)</label>
-              <input oninput="checkInputFields(I)" type="number" name="I" class="form-control" id="I" placeholder="I" required>
+              <input oninput="checkInputFields()" type="number" name="I" class="form-control" id="I" placeholder="I" required>
             </div>
             <div class="form-group col-md-3">
               <button id="btn-electricalResistance"type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
