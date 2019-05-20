@@ -76,7 +76,21 @@ class View{
   }
 
  public function showWoerterZaehlen(){
-    echo 'Wörter zählen';
+    echo '<h1>Wörter Zählen</h1><br>
+          <form method="get">
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="textnuminput">Hashinput</label>
+              <input type="text" name="textnuminput" class="form-control" id="textnuminput">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="textnumoutput">Anzahl Worte</label>
+              <input type="text" name="textnumoutput" class="form-control" id="textnumoutput" disabled>
+            </div>
+          </div>
+          <input type="hidden" name="function" value="WoerterZaehlen">
+          <button type="submit" class="btn btn-primary" Name="Action" value="textnum">Wörter Zählen</button>
+        </form>';
   }
 
   public function showElectricalResistance(){

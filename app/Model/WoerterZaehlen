@@ -1,0 +1,13 @@
+<?php
+
+class WoerterZaehlen(){
+
+	public function __construct(){}
+
+	function WoerterZaehlen($text){
+		
+	}
+
+}
+
+?>
