@@ -37,20 +37,19 @@ class Controller{
 	}
 	public function electricalResistance($data){
 
-		if(@$data['function'] == 'calcU'){
+		if(@$data['U'] == '' && @$data['I'] == '' && @$data['R'] == ''){
+			$this->view->showElectricalResistance();
+		}elseif(@$data['U'] == ''){
 			$data = $this->electricalResistanceModel->calculateU($data);
 			$this->view->showElectricalResistanceResult($data);
 
-		}elseif(@$data['function'] == 'calcI'){
+		}elseif(@$data['I'] == ''){
 			$data = $this->electricalResistanceModel->calculateI($data);
 			$this->view->showElectricalResistanceResult($data);
 
-		}elseif(@$data['function'] == 'calcR'){
+		}elseif(@$data['R'] == ''){
 			$data = $this->electricalResistanceModel->calculateR($data);
 			$this->view->showElectricalResistanceResult($data);
-
-		}else{
-			$this->view->showElectricalResistance();
 
 		}
 	}

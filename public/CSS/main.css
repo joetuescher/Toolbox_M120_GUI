@@ -5,7 +5,7 @@
 .mainContent{
 	margin: 20px !important;
 }
-#btn-ElectricalResistance{
+#btn-ElectricalResistance, #btn-electricalResistance{
 	bottom: 0;
     position: absolute;
 }

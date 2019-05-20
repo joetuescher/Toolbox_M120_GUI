@@ -75,74 +75,48 @@ class View{
     echo '<h1>Elektrischer Wiederstand</h1>
           <form method="get">
           <div class="form-row">
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-3">
+              <label for="U">Volt (U)</label>
+              <input oninput="checkInputFields(U)" type="number" name="U" class="form-control" id="U" placeholder="U" required>
+            </div>
+            <div class="form-group col-md-3">
               <label for="R">Ohm (R)</label>
-              <input type="number" name="R" class="form-control" id="R" placeholder="R" required>
+              <input oninput="checkInputFields(R)" type="number" name="R" class="form-control" id="R" placeholder="R" required>
             </div>
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-3">
               <label for="I">Ampere (I)</label>
-              <input type="number" name="I" class="form-control" id="I" placeholder="I" required>
+              <input oninput="checkInputFields(I)" type="number" name="I" class="form-control" id="I" placeholder="I" required>
             </div>
-            <input type="hidden" name="function" value="calcU">
-            <div class="form-group col-md-4">
-              <button type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
+            <div class="form-group col-md-3">
+              <button id="btn-electricalResistance"type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
             </div>
           </div>
         </form><hr>
         <form method="get">
-            <h3>Berechnung von Ohm (R)</h3>
-        <form method="get">
-          <div class="form-row">
-            <div class="form-group col-md-4">
-              <label for="U">Volt (U)</label>
-              <input type="number" name="U" class="form-control" id="U" placeholder="U" required>
-            </div>
-            <div class="form-group col-md-4">
-              <label for="I">Ampere (I)</label>
-              <input type="number" name="I" class="form-control" id="I" placeholder="I" required>
-            </div>
-            <input type="hidden" name="function" value="calcR">
-            <div class="form-group col-md-4">
-              <button type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
-            </div>
-          </div>
-        </form>
-        <hr>
-          <form method="get">
-            <h3>Berechnung von Ampere (I)</h3>
-          <div class="form-row">
-            <div class="form-group col-md-4">
-              <label for="U">Volt (U)</label>
-              <input type="number" name="U" class="form-control" id="U" placeholder="U" required>
-            </div>
-            <div class="form-group col-md-4">
-              <label for="R">Ohm (R)</label>
-              <input type="number" name="R" class="form-control" id="R" placeholder="R" required>
-            </div>
-            <input type="hidden" name="function" value="calcI">
-            <div class="form-group col-md-4">
-              <button type="submit" class="btn btn-primary" Name="Action" value="ElectricalResistance">Berechnen</button>
-            </div>
-          </div>
-        </form><hr>
          ';
   }
   public function showElectricalResistanceResult($data){
-    echo '
+    echo '<h1>Elektrischer Wiederstand Resultat</h1>
           <div class="form-row">
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-3">
               <label for="U">Volt (U)</label>
               <input type="number" name="U" class="form-control" id="U" value="'.$data['U'].'" required disabled>
             </div>
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-3">
               <label for="R">Ohm (R)</label>
               <input type="number" name="R" class="form-control" id="R" value="'.$data['R'].'" required disabled>
             </div>
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-3">
               <label for="I">Ampere (I)</label>
               <input type="number" name="I" class="form-control" id="I" value="'.$data['I'].'" required disabled>
             </div>
+            <div class="form-group col-md-3">
+              <form>
+                <a href="?Action=ElectricalResistance"><button id="btn-electricalResistance" type="button" class="btn btn-primary">Zurück</button></a>
+              </form>
+            </div>
           </div>
+          <hr>
       ';
   }
 }
