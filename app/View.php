@@ -25,6 +25,9 @@ class View{
                 <li class="nav-item">
                   <button type="submit" name="Action" class="btn" value="Gewichtsmasse">Gewichtsmasse Umwandeln</button>
                 </li>
+                <li class="nav-item">
+                  <button type="submit" name="Action" class="btn" value="WoerterZaehlen">Wörter in Text zählen</button>
+                </li>
               </ul>
             </div>
           </form>
@@ -71,6 +74,11 @@ class View{
   public function showGewichtsmasse(){
     echo 'Gewichtsmasse';
   }
+
+ public function showWoerterZaehlen(){
+    echo 'Wörter zählen';
+  }
+
   public function showElectricalResistance(){
     echo '<h1>Elektrischer Wiederstand</h1>
           <form method="get">
