@@ -6,7 +6,7 @@
 	margin: 20px !important;
 }
 #btn-ElectricalResistance, #btn-electricalResistance{
-	bottom: 0;
+	bottom: 5px;
     position: absolute;
 }
 .form-control{

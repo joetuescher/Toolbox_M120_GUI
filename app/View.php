@@ -94,7 +94,7 @@ class View{
   }
 
   public function showElectricalResistance(){
-    echo '<h1>Elektrischer Wiederstand</h1>
+    echo '<h1>Elektrischer Widerstand</h1>
           <p>Füllen Sie zwei von drei Felder aus und klicken Sie auf Berechnen.</p>
           <form method="get">
           <div class="form-row">
@@ -118,7 +118,7 @@ class View{
          ';
   }
   public function showElectricalResistanceResult($data){
-    echo '<h1>Elektrischer Wiederstand Resultat</h1>
+    echo '<h1>Elektrischer Widerstand Resultat</h1>
           <div class="form-row">
             <div class="form-group col-md-3" id="divU">
               <label for="U">Volt (U)</label>
