@@ -1,4 +1,18 @@
+window.onload = start;
 
+function start(){
+	//Funktionen welche beim laden der Seite ausgeführt werden sollen
+	markSolution();
+}
+
+function markSolution(){
+	var solution = document.getElementById("solution").value;
+	var Elem = document.getElementById(solution);
+	Elem.style.cssText = "background: lightgreen; border-radius: 5px; ";
+
+	console.log("Solution = " + solution);
+	console.log("Element = " + Elem.style.color);
+}
 
 function checkInputFields(){
 	var inputU = document.getElementById("U").value;
@@ -38,3 +52,6 @@ function checkInputFields(){
 		}
 	}
 }
+
+
+

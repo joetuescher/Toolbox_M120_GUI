@@ -120,15 +120,15 @@ class View{
   public function showElectricalResistanceResult($data){
     echo '<h1>Elektrischer Wiederstand Resultat</h1>
           <div class="form-row">
-            <div class="form-group col-md-3">
+            <div class="form-group col-md-3" id="divU">
               <label for="U">Volt (U)</label>
               <input type="number" name="U" class="form-control" id="U" value="'.$data['U'].'" required disabled>
             </div>
-            <div class="form-group col-md-3">
+            <div class="form-group col-md-3" id="divR">
               <label for="R">Ohm (R)</label>
               <input type="number" name="R" class="form-control" id="R" value="'.$data['R'].'" required disabled>
             </div>
-            <div class="form-group col-md-3">
+            <div class="form-group col-md-3" id="divI">
               <label for="I">Ampere (I)</label>
               <input type="number" name="I" class="form-control" id="I" value="'.$data['I'].'" required disabled>
             </div>
@@ -137,6 +137,7 @@ class View{
                 <a href="?Action=ElectricalResistance"><button id="btn-electricalResistance" type="button" class="btn btn-primary">Zurück</button></a>
               </form>
             </div>
+            <input type="hidden" id="solution" name="solution" value="'.$data['solution'].'">
           </div>
           <hr>
       ';

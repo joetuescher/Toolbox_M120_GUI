@@ -9,3 +9,6 @@
 	bottom: 0;
     position: absolute;
 }
+.form-control{
+	margin-bottom: 5px;
+}
