@@ -37,8 +37,8 @@
 						$controller->showWoerterZaehlen();
 						break;
 
-					case 'Gewichtsmasse':
-						$controller->showGewichtsmasse();
+					case 'GewichtsmasseUmwandeln':
+						$controller->showGewichtsmasse($request);
 						break;
 
 					default:

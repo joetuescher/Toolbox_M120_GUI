@@ -23,7 +23,7 @@ class View{
                   <button type="submit" name="Action" class="btn" value="ElectricalResistance">Eletrical Resistance</button>
                 </li>
                 <li class="nav-item">
-                  <button type="submit" name="Action" class="btn" value="Gewichtsmasse">Gewichtsmasse Umwandeln</button>
+                  <button type="submit" name="Action" class="btn" value="GewichtsmasseUmwandeln">Gewichtsmasse Umwandeln</button>
                 </li>
                 <li class="nav-item">
                   <button type="submit" name="Action" class="btn" value="WoerterZaehlen">Wörter in Text zählen</button>
@@ -71,8 +71,55 @@ class View{
         </form>';
   }
 
-  public function showGewichtsmasse(){
-    echo 'Gewichtsmasse';
+ public function showGewichtsmasse(){
+    echo '<h1>Gewichtsmasse umwandeln</h1>
+          <form method="get">
+          <div class="form-row">
+            <div class="form-group col-md-4">
+            <label for="Input">Wert</label>
+              <input type="number" name="Input" class="form-control" id="Input" placeholder="Wert eingeben" required>
+            </div>
+            <div class="form-group col-md-4">
+            <label for="dropdown1">Einheit aktuell</label>
+              <select name="dropdown1" class="form-control" id="dropdown1" required>
+              <option>Gramm</option>
+              <option>Pfund</option>
+              <option>Kilogramm</option>
+              <option>Tonne</option>
+              </select>
+            </div>
+              <div class="form-group col-md-4">
+                <label for="dropdown2">Einheit umwandeln</label>
+                <select name="dropdown2" class="form-control" id="dropdown2" required>
+                <option>Gramm</option>
+                <option>Pfund</option>
+                <option>Kilogramm</option>
+                <option>Tonne</option>
+                </select>
+              </div>
+            </div>
+            <input type="hidden" name="function" value="umwandeln">
+              <button type="submit" class="btn btn-primary" Name="Action" value="GewichtsmasseUmwandeln">Umwandeln</button>
+        </form>';
+  }
+
+  public function showGewichtsmasseResult($data){
+      echo '<h1>Gewichtsmasse umgewandelt</h1>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+            <label for="Input">Wert umgewandelt</label>
+              <input type="number" name="Input" class="form-control" id="Input" value="'.$data['Input'].'" required>
+             </div>
+            <div class="form-group col-md-4">
+            <label for="dropdown2">Einheit neu</label>
+              <input type="text" name="dropdown2" class="form-control" id="dropdown2" value="'.$data['dropdown2'].'" required>
+            </div>
+            <div class="form-group col-md-4">
+            <label for="dropdown1">Einheit vorher</label>
+              <input type="text" name="dropdown1" class="form-control" id="dropdown1" value="'.$data['dropdown1'].'" required>
+            </div>
+          </div>
+        </form>';
   }
 
  public function showWoerterZaehlen(){

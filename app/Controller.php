@@ -2,6 +2,7 @@
 
 require 'Model/HashGeneratorModel.php';
 require 'Model/ElectricalResistanceModel.php';
+require 'Model/GewichtsmasseModel.php';
 require 'View.php';
 require 'helper.php';
 
@@ -13,12 +14,15 @@ class Controller{
 	private $electricalResistanceModel;
 	private $hashGeneratorModel;
 	private $woerterZaehlen;
+	private $GewichtsmasseModel;
 
 	public function __construct(){
 		$this->view = new view;
 		$this->helper = new helper;
 		$this->electricalResistanceModel = new ElectricalResistanceModel;
 		$this->hashGeneratorModel = new HashGeneratorModel;
+		$this->GewichtsmasseModel = new GewichtsmasseModel;
+
 	}
 	
 	public function showNav(){
@@ -54,7 +58,12 @@ class Controller{
 
 		}
 	}
-	public function showGewichtsmasse(){
+	public function showGewichtsmasse($data){
+		if(@$data['function'] == 'umwandeln'){
+			$data = $this->GewichtsmasseModel->Gewichtsmasse($data);
+			$this->view->showGewichtsmasseResult($data);
+		}
+		else
 		$this->view->showGewichtsmasse();
 	}
 	public function showWoerterZaehlen(){
