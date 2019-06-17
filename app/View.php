@@ -16,9 +16,6 @@ class View{
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                  <button id="home" type="submit" name="Action" class="btn" value="Home">Home</button>
-                </li>
-                <li class="nav-item">
                   <button id="Hash" type="submit" name="Action" class="btn" value="Hash">Hash Generator</button>
                 </li>
                 <li class="nav-item">
