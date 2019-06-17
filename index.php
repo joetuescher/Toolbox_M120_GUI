@@ -34,7 +34,7 @@
 						break;
 
 					case 'WoerterZaehlen':
-						$controller->showWoerterZaehlen();
+						$controller->showWoerterZaehlen($request);
 						break;
 
 					case 'GewichtsmasseUmwandeln':

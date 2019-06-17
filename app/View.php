@@ -122,24 +122,6 @@ class View{
         </form>';
   }
 
- public function showWoerterZaehlen(){
-    echo '<h1>Wörter Zählen</h1><br>
-          <form method="get">
-          <div class="form-row">
-            <div class="form-group col-md-4">
-              <label for="textnuminput">Hashinput</label>
-              <input type="text" name="textnuminput" class="form-control" id="textnuminput">
-            </div>
-            <div class="form-group col-md-4">
-              <label for="textnumoutput">Anzahl Worte</label>
-              <input type="text" name="textnumoutput" class="form-control" id="textnumoutput" disabled>
-            </div>
-          </div>
-          <input type="hidden" name="function" value="WoerterZaehlen">
-          <button type="submit" class="btn btn-primary" Name="Action" value="textnum">Wörter Zählen</button>
-        </form>';
-  }
-
   public function showElectricalResistance(){
     echo '<h1>Elektrischer Widerstand</h1>
           <p>Füllen Sie zwei von drei Felder aus und klicken Sie auf Berechnen.</p>
@@ -188,5 +170,39 @@ class View{
           </div>
           <hr>
       ';
+  }
+ public function showWoerterZaehlen(){
+    echo '<h1>Wörter Zählen</h1><br>
+          <form method="get">
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="textInput">Text</label>
+              <input type="textfield" name="textInput" class="form-control" id="textInput" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="textOutput">Anzahl Worte</label>
+              <input type="number" name="textOutput" class="form-control" id="textOutput" disabled>
+            </div>
+          </div>
+          <input type="hidden" name="function" value="calculate">
+          <button type="submit" class="btn btn-primary" Name="Action" value="WoerterZaehlen">Wörter Zählen</button>
+        </form>';
+  }
+
+  public function showWoerterZaehlenResult($data){
+    echo '<h1>Wörter Zählen</h1><br>
+          <form method="get">
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="textInput">Text</label>
+              <input type="textfield" name="textInput" class="form-control" id="textInput" value="'.$data['textInput'].'" disabled>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="textOutput">Anzahl Worte</label>
+              <input type="number" name="textOutput" class="form-control" id="textOutput" value="'.$data['solution'].'" disabled>
+            </div>
+          </div>
+            <button type="submit" class="btn btn-primary" Name="Action" value="WoerterZaehlen">Zurück</button>
+          </form>';
   }
 }

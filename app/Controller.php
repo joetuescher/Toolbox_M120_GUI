@@ -3,6 +3,7 @@
 require 'Model/HashGeneratorModel.php';
 require 'Model/ElectricalResistanceModel.php';
 require 'Model/GewichtsmasseModel.php';
+require 'Model/WoerterZaehlenModel.php';
 require 'View.php';
 require 'helper.php';
 
@@ -22,7 +23,7 @@ class Controller{
 		$this->electricalResistanceModel = new ElectricalResistanceModel;
 		$this->hashGeneratorModel = new HashGeneratorModel;
 		$this->GewichtsmasseModel = new GewichtsmasseModel;
-
+		$this->WoerterZaehlenModel = new WoerterZaehlenModel;
 	}
 	
 	public function showNav(){
@@ -66,8 +67,14 @@ class Controller{
 			$this->view->showGewichtsmasse();
 		}
 	}
-	public function showWoerterZaehlen(){
-		$this->view->showWoerterZaehlen();
+	public function showWoerterZaehlen($data){
+		if(@$data['function'] == 'calculate'){
+			$data['solution'] = $this->WoerterZaehlenModel->WoerterZaehlen($data['textInput']);
+			$this->view->showWoerterZaehlenResult($data);
+
+		}else{
+			$this->view->showWoerterZaehlen();
+		}
 	}
 }
 ?>
