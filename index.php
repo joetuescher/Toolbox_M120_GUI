@@ -42,7 +42,7 @@
 						break;
 
 					default:
-						$controller->showHome();
+						$controller->showHash($request);
 						break;
 				}
 			?>	
