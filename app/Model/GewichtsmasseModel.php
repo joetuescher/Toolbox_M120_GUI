@@ -20,7 +20,7 @@ class GewichtsmasseModel{
             return $value;
         }
 
-        else if($neu=='Kilogramm'){
+        else if($value=='Kilogramm'){
             $value['Input']=$wert*0.001;
             return $value;
         }
