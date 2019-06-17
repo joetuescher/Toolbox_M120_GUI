@@ -5,10 +5,11 @@ function start(){
 	markSolution();
 }
 
+
 function markSolution(){
 	var solution = document.getElementById("solution").value;
 	var Elem = document.getElementById(solution);
-	Elem.style.cssText = "background: lightgreen; border-radius: 5px; ";
+	Elem.style.cssText = "background: #3AC992; border-radius: 5px; color: white";
 
 	console.log("Solution = " + solution);
 	console.log("Element = " + Elem.style.color);

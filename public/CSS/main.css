@@ -1,14 +1,97 @@
 *{
 	margin: 0;
 	padding: 0;
+	font-family: 'Roboto', sans-serif;
 }
 .mainContent{
-	margin: 20px !important;
+	padding: 0;
+    margin: 0;
+    width: 70%;
+    height: 100vh;
+    float: right;
 }
-#btn-ElectricalResistance, #btn-electricalResistance{
-	bottom: 5px;
-    position: absolute;
+.mainContainer{
+	width: 100%;
 }
+
 .form-control{
 	margin-bottom: 5px;
+}
+ul.navbar-nav{
+	display: block;
+}
+.collapse.navbar-collapse{
+	float: right;
+}
+nav.navbar{
+	text-align: right;
+	float: right;
+	display: block;
+	height: 100vh;
+	width: 100%;
+	background-color: #2B2B2B;
+}
+nav.navbar div ul li button{
+	color: white;
+}
+nav.navbar div ul li button:hover{
+	color: #FF8484 !important;
+}
+
+
+.menue-wrap{
+	float: left;
+	width: 30%;
+}
+.content-wrap{
+	float: left;
+	width: 50%;
+}
+#form-div-elRes{
+	display: block;
+	margin: 0;
+}
+.form-row{
+	display: block !important;
+	margin: 0 !important;
+	padding-bottom: 60px !important;
+}
+input.form-control, select.form-control{
+	border-width: 0 0 2px 0;
+}
+
+#navtitle{
+	font-size: 58px;
+	font-style: bold;
+	color: white;
+}
+form, .elRes{
+	margin-left: 25% !important;
+}
+.title{
+	margin-left: 12.5%;
+	margin-top: 100px;
+    margin-bottom: 15px;
+}
+.form-row{
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+	padding: 10px;
+}
+.btn-primary{
+	background-color: #FF8484 !important;
+	margin-top: -25px;
+    width: 34%;
+    margin-left: 33%;
+    margin-right: 33%;
+    border-radius: 10px;
+    border: none !important;
+}
+.nav-item{
+	margin-bottom: 5px;
+}
+.nav-item button{
+	font-size: 18px;
+}
+nav > form{
+	margin-top: 40px;
 }
