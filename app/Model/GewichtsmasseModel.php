@@ -20,7 +20,7 @@ class GewichtsmasseModel{
             return $value;
         }
 
-        else if($value=='Kilogramm'){
+        else if($value['dropdown2']=='Kilogramm'){
             $value['Input']=$wert*0.001;
             return $value;
         }

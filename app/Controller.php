@@ -62,9 +62,9 @@ class Controller{
 		if(@$data['function'] == 'umwandeln'){
 			$data = $this->GewichtsmasseModel->Gewichtsmasse($data);
 			$this->view->showGewichtsmasseResult($data);
+		}else{
+			$this->view->showGewichtsmasse();
 		}
-		else
-		$this->view->showGewichtsmasse();
 	}
 	public function showWoerterZaehlen(){
 		$this->view->showWoerterZaehlen();
